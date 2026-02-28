@@ -1,0 +1,65 @@
+.main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top right, #1e3a8a, #0f172a);
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+.glass-card {
+  /* Fundo de reserva: um pouco mais escuro/opaco caso o desfoque falhe */
+  background: rgba(15, 23, 42, 0.8);
+
+  /* Suporte para Safari antigo */
+  -webkit-backdrop-filter: blur(12px);
+
+  /* Suporte para navegadores modernos (Chrome, Edge, Firefox, Safari atual) */
+  backdrop-filter: blur(12px);
+
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin: 0;
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+
+  /* Adicione estas duas linhas abaixo para resolver o erro */
+  -webkit-background-clip: text; /* Para Chrome e Safari */
+  background-clip: text;         /* Propriedade padrão (Resolve o erro) */
+
+  -webkit-text-fill-color: transparent;
+}
+
+.terminal-mockup {
+  background: #000;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 25px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: #4ade80;
+  border: 1px solid #333;
+}
+
+.btn-github {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-github:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
